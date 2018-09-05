@@ -1,0 +1,32 @@
+page{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  background: #333;
+}
+.wx_lg{
+  width: 128rpx;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 128rpx;
+  border-radius: 50%;
+}
+.button{
+  height: 90rpx;
+  width: 600rpx;
+  line-height: 90rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 36rpx;
+  background: #1fb922;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wx_sm{
+  width: 64rpx;
+  padding-right: 16rpx;
+}

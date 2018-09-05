@@ -1,0 +1,37 @@
+page{
+    height: 100%;
+}
+.container{
+    background: #333;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container .input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40rpx;
+}
+.container text{
+    color: #fff;
+    width: 120rpx;
+
+}
+.container input{
+    color: #333;
+    background: #fff;
+    width: 400rpx;
+    padding: 20rpx;
+    border-radius: 10rpx;
+}
+.container .button{
+    margin-top: 80rpx;
+}
+.container .button button{
+    color: #fff;
+    background: #1fb922;
+    width: 560rpx;
+}

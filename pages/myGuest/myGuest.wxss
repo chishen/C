@@ -1,0 +1,190 @@
+.content .list{
+    padding-bottom: 80rpx;
+}
+.content .list .li_container{
+    position: relative;
+    height: 280rpx;
+    margin-top: 20rpx;
+}
+.content .list .li{
+    display: flex;
+    padding: 30rpx;
+    background: #fff;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.content .list .li_container .move_button{
+    width: 150rpx;
+    background: #ddd;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.content .list .li_container .move_button .edit,
+.content .list .li_container .move_button .delete{
+    height: 140rpx;
+    width: 100%;
+    background: #1fb922;
+    color: #fff;
+    font-size: 32rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content .list .li .info{
+    box-sizing: border-box;
+    flex: 1;
+    padding-right: 20rpx;
+    width: calc(100% - 200rpx);
+}
+.content .list .li .info .info_view{
+    display: flex;
+    align-items: center;
+    height: 48rpx;
+    padding-bottom: 8rpx;
+}
+.content .list .li .info .sex image{
+    width: 48rpx;
+    padding-right: 16rpx;
+    display: flex;
+    align-items: center;
+}
+.content .list .li .info .name{
+    display: flex;
+    align-items: center;
+    font-size: 36rpx;
+    color: #333;
+}
+.content .list .li .phone,
+.content .list .li .address,
+.content .list .li .msg{
+    width: 100%;
+    font-size: 28rpx;
+    color: #999;
+    padding-top: 16rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.content .list .li .price{
+    padding-left: 20rpx;
+    border-left: 1px solid #eee;
+    width: 200rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.content .list .li .price .paid,
+.content .list .li .price .pending,
+.content .list .li .price .total{
+    font-size: 26rpx;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+}
+.content .button{
+    width: 400rpx; 
+    height: 80rpx;
+    background: #ddd;
+    margin: auto;
+    border-radius: 8rpx;
+    background: #333;
+    color: #fff;
+    font-size: 32rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+}
+.modal .container{
+    /* height: 100rpx; */
+    width: 600rpx;
+    background: #fff;
+    border-radius: 16rpx;
+    padding: 30rpx;
+}
+.modal .container .title{
+    text-align: center;
+    font-size: 36rpx;
+    padding-bottom: 40rpx;
+}
+.modal .container .li{
+    display: flex;
+    align-items: center;
+    padding: 16rpx 0;
+}
+.modal .container .li text{
+    color: #666;
+    font-size: 28rpx;
+    width: 100rpx;
+}
+.modal .container .li input{
+    flex: 1;
+    height: 60rpx;
+    border: 1px solid #eee;
+    border-radius: 4rpx;
+    padding: 0 20rpx;
+    font-size: 28rpx;
+    color: #333;
+}
+.modal .container .li input .input-placeholder{
+    font-size: 28rpx;
+    color: #999;
+}
+.modal .container .li textarea{
+    flex: 1;
+    border: 1px solid #eee;
+    border-radius: 4rpx;
+    padding: 8rpx 20rpx;
+    font-size: 28rpx;
+    color: #333;
+    height: 160rpx;
+}
+.modal .container .li textarea .textarea-placeholder{
+    font-size: 28rpx;
+    color: #999;
+}
+.modal .container .li radio-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28rpx;
+}
+.modal .container .li radio{
+    transform:scale(0.7);
+}
+.modal .container .button{
+    padding-top: 20rpx;
+    display: flex;
+    justify-content: space-around;
+}
+.modal .container .button button{
+    width: 260rpx;
+    background: #333;
+    color: #fff;
+    font-size: 32rpx;
+}
+.modal .container .button button.cancal{
+    border: 1px solid #333;
+    color: #333;
+    background: #fff;
+}

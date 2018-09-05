@@ -1,0 +1,178 @@
+page{
+    height: 100%;
+}
+.content{
+    height: 100%;
+    background: #fff;
+}
+.search{
+    position: fixed;
+    height: 100rpx;
+    background: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.search_content{
+    width: 650rpx;
+}
+.search input{
+    width: 500rpx;
+    height: 80rpx;
+    background: #eee;
+    float: left;
+    padding-left: 16rpx;
+    padding-right: 16rpx;
+    box-sizing: border-box;
+    border-top-left-radius: 8rpx;
+    border-bottom-left-radius: 8rpx;
+}
+.search_btn{
+    height: 80rpx;
+    width: 150rpx;
+    background: #1fb922;
+    float: right;
+    font-size: 32rpx;
+    color: #fff;
+    line-height: 80rpx;
+    text-align: center;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 8rpx;
+    border-bottom-right-radius: 8rpx;
+}
+.search_btn::after{
+    border-radius: 0;
+    border: 0;
+}
+.scroll{
+    height: 100%;
+    padding-top: 100rpx;
+    box-sizing: border-box;
+    background: #eee;
+}
+.item{
+    padding: 16rpx 16rpx 16rpx 32rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    margin-bottom: 16rpx;
+}
+.item .content{
+    flex: 1;
+    border-right: 1rpx solid #ddd;
+}
+.item .content .product{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16rpx;
+}
+.item .content .product .name{
+    font-size: 36rpx;
+    color: #333;
+    font-weight: bold;
+}
+.item .content .product .type{
+    color: #999;
+    font-size: 28rpx;
+    padding-right: 20rpx;
+}
+.item .content .info{
+    font-size: 24rpx;
+    color: #999;
+    padding-right: 20rpx;
+} 
+.item .price{
+    width: 180rpx;
+    height: 100%;
+    color: #F40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 40rpx;
+}
+.item2{
+    padding-left: 32rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    margin-bottom: 16rpx;
+}
+.item2 .content{
+    flex: 1;
+    padding-top: 16rpx;
+    padding-bottom: 16rpx;
+}
+.item2 .content .product{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16rpx;
+    border-bottom: 1rpx solid #ddd;
+}
+.item2 .content .product .name{
+    font-size: 40rpx;
+    color: #333;
+}
+.item2 .content .price{
+    color: #F40;
+    font-size: 36rpx;
+    display: flex;
+    padding-bottom: 8rpx;
+}
+.item2 .content .price .title{
+    color: #999;
+    font-size: 20rpx;
+}
+.item2 .content .price .low_price,
+.item2 .content .price .mid_price,
+.item2 .content .price .high_price{
+    flex: 1;
+    text-align: left;
+}
+.item2 .content .info{
+    font-size: 24rpx;
+    color: #999;
+    padding-right: 20rpx;
+} 
+.item2 .content .info .format{
+    padding-bottom: 8rpx;
+}
+.item2 .content .product .bed{
+    padding-top: 8rpx;
+    color: #F40;
+    font-size: 20rpx;
+    padding-left: 16rpx;
+}
+.item2 .content .product .type{
+    color: #999;
+    font-size: 28rpx;
+    padding-right: 20rpx;
+}
+.item2 .number{
+    width: 100rpx;
+    background: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-self: stretch;
+    font-size: 24rpx;
+    flex-direction: column;
+    padding-top: 16rpx;
+    padding-bottom: 16rpx;
+}
+.item2 .number image{
+    width: 48rpx;
+    height: 48rpx;
+}
+.noMore{
+    background: #eee;
+    font-size: 24rpx;
+    text-align: center;
+    padding-bottom: 16rpx;
+    color: #999;
+}

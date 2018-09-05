@@ -1,0 +1,82 @@
+<view class="container">
+    <view class="info">
+        <view class="name">
+            <image wx:if="{{info.sex == '男'}}" class="sex" src="/images/man_black.png" mode="widthFix"></image>
+            <image wx:if="{{info.sex == '女'}}" class="sex" src="/images/woman_black.png" mode="widthFix"></image>
+            <text>{{info.name}}</text>
+            <image class="edit" src="/images/edit.png" mode="widthFix"></image>
+        </view>
+        <view class="phone">
+            <text>电话：</text>
+            <view>{{info.phone}}</view>
+        </view>
+        <view class="address">
+            <text>地址：</text>
+            <view>{{info.address}}</view>
+        </view>
+        <view class="msg">
+            <text>备注：</text>
+            <view>{{info.msg}}</view>
+        </view>
+    </view>
+    <view class="list">
+        <view class="li_container" wx:for="{{list}}" wx:key="{{index}}">
+            <view class="li" style="{{item.txtStyle}}" data-index="{{index}}" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
+                <view class="product">
+                    <view class="name">{{item.product}}</view>
+                    <view class="type">品类：{{item.type}}</view>
+                    <view class="format">规格：{{item.format}}</view>
+                    <view class="size">尺寸：{{item.size}}</view>
+                </view>
+                <view class="amount">
+                    <view>×{{item.amount}}</view>
+                </view>
+                <view class="price">
+                    <view class="paid" style="color: #1fb922;">
+                        <view>已收</view>
+                        <view class="price_value">{{item.paid}}</view>
+                    </view>
+                    <view class="pending" style="color: #F40;">
+                        <view>待收</view>
+                        <view class="price_value">{{item.pending}}</view>
+                    </view>
+                    <view class="total">
+                        <view>共计</view>
+                        <view class="price_value">{{item.total}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="move_button">
+                <view class="delete" bindtap="delete" style="background: #f40;">删除</view>
+                <view class="edit" bindtap="edit">编辑</view>
+            </view>
+        </view>
+    </view>
+    <view class="button">
+        <button bindtap="goToHome">返回首页关联产品</button>
+    </view>
+</view>
+<view wx:if="{{showModal}}" class="modal_container">
+    <view class="modal">
+        <form bindsubmit="formSubmit">
+            <view class="title">编辑</view>
+            <input name="product_id" hidden type="text" value="{{product_edit.product_id}}"/>
+            <view class="li">
+                <text>数量：</text>
+                <input name="amount" type="text" value="{{product_edit.amount}}"/>
+            </view>
+            <view class="li">
+                <text>已收：</text>
+                <input name="paid" type="text" value="{{product_edit.paid}}"/>
+            </view>
+            <view class="li">
+                <text>总计：</text>
+                <input name="total" type="text" value="{{product_edit.total}}"/>
+            </view>
+            <view class="button">
+                <button class="cancal" bindtap="closeModal">取消</button>
+                <button form-type="submit">确认</button>
+            </view>
+        </form>
+    </view>
+</view>

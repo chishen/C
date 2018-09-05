@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<image class="wx_lg" mode="widthFix"
+src="/images/icon.png"
+bindtap="handleClick"></image>
+<button class="button" open-type="getUserInfo" 
+bindgetuserinfo="getUserInfo">
+<image class="wx_sm" mode="widthFix" 
+src="/images/wx_sm.png"></image>微信授权登录</button>

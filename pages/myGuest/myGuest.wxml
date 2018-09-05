@@ -1,0 +1,86 @@
+<view class="content">
+    <view class="list">
+        <view class="li_container" wx:for="{{list}}" wx:key="{{index}}">
+            <view class="li" style="{{item.txtStyle}}" bindtap="guestDetail" data-index="{{index}}" 
+            bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
+                <view class="info">
+                    <view class="info_view">
+                        <view class="sex">
+                            <image wx:if="{{item.sex == '男'}}" src="/images/man.png" mode="widthFix"></image>
+                            <image wx:if="{{item.sex == '女'}}" src="/images/woman.png" mode="widthFix"></image>
+                        </view>
+                        <view class="name">
+                            <text>{{item.name}}</text>
+                        </view>
+                    </view>
+                    <view class="phone">电话：
+                        <text>{{item.phone}}</text>
+                    </view>
+                    <view class="address">地址：
+                        <text>{{item.address}}</text>
+                    </view>
+                    <view class="msg">备注：
+                        <text>{{item.msg}}</text>
+                    </view>
+                </view>
+                <view class="price">
+                    <view class="paid" style="color: #1fb922;">
+                        <view>已收</view>
+                        <view class="price_value">999.99</view>
+                    </view>
+                    <view class="pending" style="color: #F40;">
+                        <view>待收</view>
+                        <view class="price_value">9999.99</view>
+                    </view>
+                    <view class="total">
+                        <view>共计</view>
+                        <view class="price_value">99999.99</view>
+                    </view>
+                </view>
+            </view>
+            <view class="move_button">
+                <view class="delete" style="background: #f40;" data-index="{{index}}" data-name="{{item.name}}">删除</view>
+                <view class="edit" bindtap="edit" data-index="{{index}}">编辑</view>
+            </view>
+        </view>
+    </view>
+    <view class="button" bindtap="addGuest">新增客户</view>
+</view>
+<view class="modal" wx:if="{{addGuest}}">
+    <view class="container">
+        <form bindsubmit="formSubmit">
+            <view class="title">{{isEdit?'编辑':'新增'}}客户</view>
+            <input name="type" hidden type="text" value="{{isEdit?'edit':'add'}}" />
+            <view class="li name">
+                <text>姓名：</text>
+                <input name="name" placeholder="请输入客户姓名" value="{{editDetail.name}}" />
+            </view>
+            <view class="li sex">
+                <text>性别：</text>
+                <radio-group name="sex" class="radio-group">
+                    <label>
+                        <radio value="男" checked="{{editDetail.sex == '男'}}" />男</label>
+                    <label>
+                        <radio value="女" checked="{{editDetail.sex == '女'}}" style="margin-left: 20rpx;" />女</label>
+                </radio-group>
+            </view>
+            <view class="li phone">
+                <text>电话：</text>
+                <input name="phone" type="number" placeholder="请输入客户电话" value="{{editDetail.phone}}" />
+            </view>
+            <view class="li address">
+                <text>地址：</text>
+                <input name="address" placeholder="请输入客户地址" value="{{editDetail.address}}" />
+            </view>
+            <view class="li msg">
+                <text>备注：</text>
+                <textarea name="msg" placeholder="(选填)" maxlength="-1" fixed="true" value="{{editDetail.msg}}" />
+            </view>
+            <view class="button">
+                <button class="cancal" bindtap="closeModal">取消</button>
+                <button form-type="submit">确认</button>
+            </view>
+        </form>
+
+    </view>
+</view>

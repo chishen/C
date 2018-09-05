@@ -1,0 +1,219 @@
+.container {}
+
+.container .info {
+    /* height: 300rpx; */
+    background: #333;
+    color: #fff;
+    padding: 30rpx;
+    font-size: 28rpx;
+}
+
+.container .info .name {
+    display: flex;
+    align-items: center;
+    font-size: 36rpx;
+    padding-bottom: 20rpx;
+}
+
+.container .info .name text {
+    padding-left: 16rpx;
+    flex: 1;
+}
+
+.container .info .name .sex {
+    width: 64rpx;
+}
+
+.container .info .name .edit {
+    width: 64rpx;
+}
+
+.container .info .phone,
+.container .info .address,
+.container .info .msg {
+    color: #ddd;
+    padding: 8rpx 0;
+    width: 600rpx;
+    line-height: 40rpx;
+    display: flex;
+    text-align: left;
+    align-content: flex-start;
+}
+
+.container .info .phone text,
+.container .info .address text,
+.container .info .msg text {
+    width: 100rpx;
+}
+
+.container .info .phone view,
+.container .info .address view,
+.container .info .msg view {
+    flex: 1;
+}
+
+.container .list .li_container {
+    position: relative;
+    height: 200rpx;
+    margin-top: 20rpx;
+}
+
+.container .list .li_container .li {
+    display: flex;
+    padding: 16rpx 30rpx;
+    background: #fff;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container .list .li_container .li .product {
+    flex: 1;
+    width: calc(100% - 300rpx);
+}
+
+.container .list .li_container .li .product .name {
+    color: #333;
+    font-size: 40rpx;
+    padding-bottom: 8rpx;
+}
+
+.container .list .li_container .li .product .type,
+.container .list .li_container .li .product .format,
+.container .list .li_container .li .product .size {
+    font-size: 24rpx;
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.container .list .li_container .li .amount {
+    width: 100rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32rpx;
+    color: #333;
+    border-right: 1px solid #eee;
+    flex-direction: column;
+}
+
+.container .list .li_container .li .price {
+    padding-left: 20rpx;
+    border-left: 1px solid #eee;
+    width: 200rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.container .list .li_container .li .price .paid,
+.container .list .li_container .li .price .pending,
+.container .list .li_container .li .price .total {
+    font-size: 24rpx;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .list .li_container .move_button {
+    width: 150rpx;
+    background: #ddd;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.container .list .li_container .move_button .edit,
+.container .list .li_container .move_button .delete {
+    height: 100rpx;
+    width: 100%;
+    background: #1fb922;
+    color: #fff;
+    font-size: 32rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .button{
+    padding-top: 80rpx;
+}
+.container .button button{
+    width: 400rpx;
+    height: 80rpx;
+    background: #333;
+    color: #fff;
+    border-radius: 8rpx;
+    font-size: 32rpx;
+}
+.modal_container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0 ,0, 0.7);
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal{
+    width: 600rpx;
+    background: #fff;
+    border-radius: 16rpx;
+    padding: 30rpx;
+}
+.modal .title{
+    text-align: center;
+    font-size: 36rpx;
+    padding-bottom: 40rpx;
+}
+.modal .li{
+    display: flex;
+    align-items: center;
+    padding: 16rpx 0;
+}
+.modal .li text{
+    color: #666;
+    font-size: 28rpx;
+    width: 100rpx;
+}
+.modal .li input{
+    flex: 1;
+    height: 60rpx;
+    border: 1px solid #eee;
+    border-radius: 4rpx;
+    padding: 0 20rpx;
+    font-size: 28rpx;
+    color: #333;
+}
+.modal .li input .input-placeholder{
+    font-size: 28rpx;
+    color: #999;
+}
+.modal .button{
+    padding-top: 20rpx;
+    display: flex;
+    justify-content: space-around;
+}
+.modal .button button{
+    width: 260rpx;
+    background: #333;
+    color: #fff;
+    font-size: 32rpx;
+}
+.modal .button button.cancal{
+    border: 1px solid #333;
+    color: #333;
+    background: #fff;
+}

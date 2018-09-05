@@ -1,0 +1,72 @@
+<view class="content">
+    <view class="search">
+        <view class="search_content">
+            <input type="text" placeholder="请输入货号" bindinput="change" bindconfirm="search" />
+            <button class="search_btn" bindtap="search">搜索</button>
+        </view>
+    </view>
+    <scroll-view scroll-y class="scroll">
+        <block wx:if="{{name === 'fangqi' && password === 'fq123456'}}">
+            <view class="item2" wx:for="{{List}}" wx:key="{{index}}" bindtap="detail" data-index="{{index}}">
+                <view class="content">
+                    <view class="product">
+                        <text class="name">
+                            <text>{{item.product}}</text>
+                            <text wx:if="{{item.type == '床'}}" class="bed">*价格不含排骨架</text>
+                        </text>
+                        <text class="type">{{item.type}}</text>
+                    </view>
+                    <view class="price">
+                        <block wx:if="{{!identityGuest}}">
+                            <view class="low_price">
+                                <text class="title">批发价：</text>{{item.low_price}}</view>
+                            <view class="mid_price">
+                                <text class="title">拿货价：</text>{{item.mid_price}}</view>
+                        </block>
+                        <view class="high_price">
+                            <text class="title">销售价：</text>{{item.high_price}}</view>
+                    </view>
+                    <view class="info">
+                        <view class="format">
+                            <text>规格：</text>
+                            <text>{{item.format}}</text>
+                        </view>
+                        <view class="size">
+                            <text>尺寸：</text>
+                            <text>{{item.size}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="item2" wx:for="{{List}}" wx:key="{{index}}" bindtap="detail" data-index="{{index}}">
+                <view class="content">
+                    <view class="product">
+                        <text class="name">
+                            <text>{{item.product}}</text>
+                            <text wx:if="{{item.type == '床'}}" class="bed">*价格不含排骨架</text>
+                        </text>
+                        <text class="type">{{item.type}}</text>
+                    </view>
+                    <view class="price">
+                        <view class="high_price">
+                            <text class="title">最低价：</text>{{item.xs_price}}
+                        </view>
+                    </view>
+                    <view class="info">
+                        <view class="format">
+                            <text>规格：</text>
+                            <text>{{item.format}}</text>
+                        </view>
+                        <view class="size">
+                            <text>尺寸：</text>
+                            <text>{{item.size}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <view class="noMore">无更多数据~</view>
+    </scroll-view>
+</view>

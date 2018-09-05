@@ -1,0 +1,23 @@
+<view class="table">
+    <view class="tr"><view class="th">序号：</view><view class="td">{{item.product_id || '-'}}</view></view>
+    <view class="tr"><view class="th">货号：</view><view class="td">{{item.product || '-'}}</view></view>
+    <view class="tr"><view class="th">名称：</view><view class="td">{{item.name || '-'}}</view></view>
+    <view class="tr"><view class="th">规格：</view><view class="td">{{item.format || '-'}}</view></view>
+    <view class="tr"><view class="th">尺寸：</view><view class="td">{{item.size || '-'}}</view></view>
+    <view class="tr"><view class="th">搭配排骨架尺寸：</view><view class="td">{{item.shelf_size || '-'}}</view></view>
+    <view class="tr"><view class="th">厚度：</view><view class="td">{{item.height || '-'}}</view></view>
+    <view class="tr"><view class="th">型号：</view><view class="td">{{item.model || '-'}}</view></view>
+    <view class="tr"><view class="th">品类：</view><view class="td">{{item.type || '-'}}</view></view>
+    <block wx:if="{{name === 'fangqi' && password === 'fq123456'}}">
+        <view class="tr"><view class="th">批发价：</view><view class="td">{{item.low_price || '-'}}</view></view>
+        <view class="tr"><view class="th">拿货价：</view><view class="td">{{item.mid_price || '-'}}</view></view>
+        <view class="tr"><view class="th">销售价：</view><view class="td">{{item.high_price || '-'}}</view></view>
+        <view class="tr"><view class="th">来自表：</view><view class="td">{{item.table || '-'}}</view></view>
+        <view class="tr"><view class="th">来源：</view><view class="td">{{item.source || '-'}}</view></view>
+    </block>
+    <view class="tr"><view class="th">材质：</view><view class="td">{{item.material || '-'}}</view></view>
+    <view class="tr"><view class="th">是否带床箱：</view><view class="td">{{item.bed_box || '-'}}</view></view>
+    <view class="tr"><view class="th">出木/脚色：</view><view class="td">{{item.foot_color || '-'}}</view></view>
+    <view class="tr"><view class="th">配色方案：</view><view class="td">{{item.color || '-'}}</view></view>
+    <view class="tr"><view class="th">备注：</view><view class="td">{{item.info || '-'}}</view></view>
+</view>

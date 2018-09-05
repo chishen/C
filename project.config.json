@@ -1,0 +1,89 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.1",
+	"appid": "wx3d00e358e247a5ad",
+	"projectname": "%E5%95%86%E4%BA%BAC",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 7,
+			"list": [
+				{
+					"id": 1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "商品详情页",
+					"pathName": "pages/detail/detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "个人中心",
+					"pathName": "pages/user/user",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的客户",
+					"pathName": "pages/myGuest/myGuest",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "客户详情",
+					"pathName": "pages/guestDetail/guestDetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "用户授权",
+					"pathName": "pages/authorize/authorize",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "登录",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "主页",
+					"pathName": "pages/home/home",
+					"query": ""
+				}
+			]
+		}
+	}
+}

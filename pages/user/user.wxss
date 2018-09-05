@@ -1,0 +1,39 @@
+.content{
+
+}
+.content .info{
+    height: 280rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+}
+.content .info .icon{
+    width: 100rpx;
+    border-radius: 50%;
+}
+.content .info .name{
+    font-size: 28rpx;
+    color: #666;
+    padding-top: 30rpx;
+}
+.content .list{
+    margin-top: 20rpx;
+}
+.content .list .li{
+    height: 100rpx;
+    background: #fff;
+    border-top: 1rpx solid #eee;
+    font-size: 32rpx;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding: 0 30rpx;
+}
+.content .list .li .title{
+    flex: 1;
+}
+.content .list .li .right{
+    width: 32rpx;
+}

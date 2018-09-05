@@ -1,0 +1,31 @@
+<view class="content">
+    <view class="info">
+        <image class="icon" src="{{avatarUrl}}" mode="widthFix"></image>
+        <view class="name">{{nickName}}</view>
+    </view>
+    <view class="list">
+        <view class="li" style="border: 0;" bindtap="changePassword">
+            <text class="title">修改密码</text>
+            <image class="right" src="/images/right.png" mode="widthFix"></image>
+        </view>
+    </view>
+    <!-- <view class="list">
+        <view class="li" style="border: 0;" bindtap="myGuest">
+            <text class="title">我的客户</text>
+            <image class="right" src="/images/right.png" mode="widthFix"></image>
+        </view>
+        <view class="li"></view>
+    </view>
+    <view class="list">
+        <view class="li" style="border: 0;">
+            <text class="title">客户模式</text>
+            <switch bindchange="switchIdentity"/>
+        </view>
+    </view> -->
+    <!-- <view class="list" bindtap="goAuthorize" wx:if="{{user_id === 1 || user_id === 2}}">
+        <view class="li" style="border: 0;">
+            <text class="title">用户授权</text>
+            <image class="right" src="/images/right.png" mode="widthFix"></image>
+        </view>
+    </view> -->
+</view>

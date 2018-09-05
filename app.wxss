@@ -1,0 +1,6 @@
+page{
+    background: #fafafa;
+}
+button::after{
+    border: 0;
+}
