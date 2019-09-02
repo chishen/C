@@ -34,7 +34,7 @@ Page({
                 timeStamp: Date.parse(new Date())
             },
             success: function (res) {
-                let List = res.data.List
+                let List = res.data.List || []
                 List = List.map(item => {
                     if(item.type === '床') {
                         item.xs_price = (item.low_price*1.7).toFixed(1)
