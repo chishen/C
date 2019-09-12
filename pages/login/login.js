@@ -1,3 +1,6 @@
+// const app = getApp();
+// const bathPath = app.globalData.bathPath
+
 Page({
     data: {
         name: '',
